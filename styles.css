@@ -1,0 +1,275 @@
+t/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+	font-family: system-ui;
+	font-style: normal;
+	font-weight: 300;
+	src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Segoe UI Light"), local("Ubuntu Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+	font-family: system-ui;
+	font-style: italic;
+	font-weight: 300;
+	src: local(".SFNSText-LightItalic"), local(".HelveticaNeueDeskInterface-Italic"), local(".LucidaGrandeUI"), local("Segoe UI Light Italic"), local("Ubuntu Light Italic"), local("Roboto-LightItalic"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+	font-family: system-ui;
+	font-style: normal;
+	font-weight: 400;
+	src: local(".SFNSText-Regular"), local(".HelveticaNeueDeskInterface-Regular"), local(".LucidaGrandeUI"), local("Segoe UI"), local("Ubuntu"), local("Roboto-Regular"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+	font-family: system-ui;
+	font-style: italic;
+	font-weight: 400;
+	src: local(".SFNSText-Italic"), local(".HelveticaNeueDeskInterface-Italic"), local(".LucidaGrandeUI"), local("Segoe UI Italic"), local("Ubuntu Italic"), local("Roboto-Italic"), local("DroidSans"), local("Tahoma");
+}
+
+@font-face {
+	font-family: system-ui;
+	font-style: normal;
+	font-weight: 500;
+	src: local(".SFNSText-Medium"), local(".HelveticaNeueDeskInterface-MediumP4"), local(".LucidaGrandeUI"), local("Segoe UI Semibold"), local("Ubuntu Medium"), local("Roboto-Medium"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+	font-family: system-ui;
+	font-style: italic;
+	font-weight: 500;
+	src: local(".SFNSText-MediumItalic"), local(".HelveticaNeueDeskInterface-MediumItalicP4"), local(".LucidaGrandeUI"), local("Segoe UI Semibold Italic"), local("Ubuntu Medium Italic"), local("Roboto-MediumItalic"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+	font-family: system-ui;
+	font-style: normal;
+	font-weight: 700;
+	src: local(".SFNSText-Bold"), local(".HelveticaNeueDeskInterface-Bold"), local(".LucidaGrandeUI"), local("Segoe UI Bold"), local("Ubuntu Bold"), local("Roboto-Bold"), local("DroidSans-Bold"), local("Tahoma Bold");
+}
+
+@font-face {
+	font-family: system-ui;
+	font-style: italic;
+	font-weight: 700;
+}
+
+body {
+    font-family: system-ui;
+    /* background: #1f0e1c; */
+    /* background: #6F6F6F; */
+    /* background:#e5e5e5; */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.checkers {
+    background-color:white;
+    background-image: linear-gradient(90deg, rgba(200,0,0,.1) 50%, transparent 50%),
+		      linear-gradient(rgba(200,0,0,.1) 50%, transparent 50%);
+    background-size:50px 50px;
+}
+
+.selection {
+     /* border: 1px solid white; */
+    animation-name: border;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    border-radius: 2px;
+    animation-direction: alternate;
+}
+
+@keyframes border {
+    from  {
+	 box-shadow: 0 1px 0 1px  yellow,
+		     0 -1px 0 1px white,
+	             1px 0 0 1px yellow,
+	             -1px 0 0 1px white,
+		     1px -1px 0 1px yellow,
+		     -1px 1px 0 1px white,
+		     1px 1px 0 1px yellow,
+		     -1px -1px 0 1px white;
+    }
+    to {
+	box-shadow: 0 1px 0 1px white,
+		    0 -1px 0 1px yellow,
+	            1px 0 0 1px white,
+	            -1px 0 0 1px yellow,
+		    1px -1px 0 1px white,
+		     -1px 1px 0 1px yellow,
+		     1px 1px 0 1px white,
+		     -1px -1px 0 1px yellow;
+    }
+}
+
+.icon-wrap,
+.icon-align-baseline,
+.icon-align-center,
+.icon-align-end,
+.icon-align-start,
+.icon-align-stretch,
+.icon-arrow-d,
+.icon-arrow-l,
+.icon-arrow-r,
+.icon-arrow-u,
+.icon-justify-center,
+.icon-justify-end,
+.icon-justify-space-around,
+.icon-justify-space-between,
+.icon-justify-space-evenly,
+.icon-justify-start,
+.icon-no-wrap,
+.icon-wrap-reverse,
+.icon-flex-center,
+.icon-flex-start,
+.icon-flex-end,
+.icon-flex-stretch,
+.icon-flex-space-around,
+.icon-flex-space-between,
+.icon-static,
+.icon-relative,
+.icon-absolute,
+.icon-caret-r {
+	height: 16px;
+	width: 16px;
+	background-repeat: none;
+	background-size: contain;
+}
+
+.icon-wrap {
+	background-image: url('./images/wrap.png');
+}
+.icon-align-baseline {
+	background-image: url('./images/align-baseline.png');
+}
+.icon-align-center {
+	background-image: url('./images/align-center.png');
+}
+.icon-align-end {
+	background-image: url('./images/align-end.png');
+}
+.icon-align-start {
+	background-image: url('./images/align-start.png');
+}
+.icon-align-stretch {
+	background-image: url('./images/align-stretch.png');
+}
+.icon-arrow-d {
+	background-image: url('./images/arrow-d.png');
+}
+.icon-arrow-l {
+	background-image: url('./images/arrow-l.png');
+}
+.icon-arrow-r {
+	background-image: url('./images/arrow-r.png');
+}
+.icon-arrow-u {
+	background-image: url('./images/arrow-u.png');
+}
+.icon-justify-center {
+	background-image: url('./images/justify-center.png');
+}
+.icon-justify-end {
+	background-image: url('./images/justify-end.png');
+}
+.icon-justify-space-around {
+	background-image: url('./images/justify-space-around.png');
+}
+.icon-justify-space-between {
+	background-image: url('./images/justify-space-between.png');
+}
+.icon-justify-space-evenly {
+	background-image: url('./images/justify-space-evenly.png');
+}
+.icon-justify-start {
+	background-image: url('./images/justify-start.png');
+}
+.icon-no-wrap {
+	background-image: url('./images/no-wrap.png');
+}
+.icon-wrap-reverse {
+	background-image: url('./images/wrap-reverse.png');
+}
+
+.icon-flex-center {
+	background-image: url('./images/flex-center.png');
+}
+.icon-flex-end {
+	background-image: url('./images/flex-end.png');
+}
+.icon-flex-space-around {
+	background-image: url('./images/flex-space-around.png');
+}
+.icon-flex-space-between {
+	background-image: url('./images/flex-space-between.png');
+}
+.icon-flex-stretch {
+	background-image: url('./images/flex-stretch.png');
+}
+.icon-flex-start {
+	background-image: url('./images/flex-start.png');
+}
+
+.icon-static {
+	background-image: url('./images/static.png');
+}
+.icon-relative {
+	background-image: url('./images/relative.png');
+}
+.icon-absolute {
+	background-image: url('./images/absolute.png');
+}
+
+.icon-caret-r {
+    background-image: url('./images/caret-r.png');
+}
